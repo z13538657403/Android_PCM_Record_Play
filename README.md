@@ -1,0 +1,2 @@
+# Android_PCM_Record_Play
+Android使用AudioRecord录制pcm音频原始数据以及使用AudioTrack播放
