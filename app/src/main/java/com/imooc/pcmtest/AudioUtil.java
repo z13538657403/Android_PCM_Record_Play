@@ -25,7 +25,7 @@ public class AudioUtil
     //录音的采样频率
     private static int audioRate = 44100;
     //录音的声道，单声道
-    private static int audioChannel = AudioFormat.CHANNEL_IN_MONO;
+    private static int audioChannel = AudioFormat.CHANNEL_IN_STEREO;
     //量化的精度
     private static int audioFormat = AudioFormat.ENCODING_PCM_16BIT;
     //缓存的大小
@@ -62,7 +62,7 @@ public class AudioUtil
         if (!baseFile.exists())
             baseFile.mkdirs();
         pcmFile = new File(basePath + "/encode.pcm");
-        wavFile = new File(basePath + "/encode.pcm");
+        wavFile = new File(basePath + "/encode.wav");
 
         if (pcmFile.exists())
             pcmFile.delete();
@@ -175,7 +175,7 @@ public class AudioUtil
         long totalAudioLen;
         long totalDataLen;
         long longSampleRate = AudioUtil.audioRate;
-        int channels = 1;
+        int channels = 2;
         long byteRate = 16 * AudioUtil.audioRate * channels / 8;
         byte[] data = new byte[bufferSize];
 

@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity
         Log.d("MainActivity" , "lu yin kaishi");
         int streamType = AudioManager.STREAM_MUSIC;
         int simpleRate = 44100;
-        int channelConfig = AudioFormat.CHANNEL_OUT_MONO;
+        int channelConfig = AudioFormat.CHANNEL_OUT_STEREO;
         int audioFormat = AudioFormat.ENCODING_PCM_16BIT;
         int mode = AudioTrack.MODE_STREAM;
 
@@ -128,7 +128,6 @@ public class MainActivity extends AppCompatActivity
         {
             e.printStackTrace();
         }
-
     }
 
     @Override
